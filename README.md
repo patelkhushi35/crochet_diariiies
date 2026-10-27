@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crochet_Diariiies - Handmade Crochet E-commerce
 
 A beautiful, modern, premium MERN stack e-commerce website for a handmade crochet brand.
@@ -288,3 +289,6 @@ Built with love for Crochet_Diariiies
 ---
 
 **Made with yarn, one stitch at a time.** 🧶
+=======
+# crochet_diariiies
+>>>>>>> f549137e61a3ab614b36e4791c89c28f7ce9c071
