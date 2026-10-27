@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-beige-200;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-body text-brown-900 bg-cream-50 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-medium text-brown-900;
+  }
+  
+  ::selection {
+    @apply bg-cream-300 text-brown-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-btn font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply btn bg-brown-700 text-white hover:bg-brown-800 focus:ring-brown-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-cream-200 text-brown-900 hover:bg-cream-300 focus:ring-cream-400;
+  }
+  
+  .btn-accent {
+    @apply btn bg-cream-500 text-white hover:bg-cream-600 focus:ring-cream-400;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-brown-700 text-brown-700 hover:bg-brown-700 hover:text-white focus:ring-brown-500;
+  }
+  
+  .btn-ghost {
+    @apply btn text-brown-700 hover:bg-cream-100 focus:ring-cream-300;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-btn border border-beige-300 bg-white text-brown-900 placeholder:text-beige-400 focus:outline-none focus:ring-2 focus:ring-cream-400 focus:border-transparent transition-all duration-200;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-brown-700 mb-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-card-lg shadow-card overflow-hidden transition-all duration-300 hover:shadow-card-hover;
+  }
+  
+  .card-hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+  
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-heading font-medium text-brown-900 text-center mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg sm:text-xl text-brown-600 text-center max-w-2xl mx-auto mb-12;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-new {
+    @apply badge bg-sage-100 text-sage-800;
+  }
+  
+  .badge-sale {
+    @apply badge bg-cream-100 text-cream-800;
+  }
+  
+  .badge-bestseller {
+    @apply badge bg-amber-100 text-amber-800;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-beige-300 rounded-full hover:bg-beige-400;
+}
+
+/* Focus visible for accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-cream-500 ring-offset-2;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-brown-900/80 backdrop-blur-md border border-brown-700/50;
+}
